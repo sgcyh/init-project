@@ -5,8 +5,16 @@
 import TestCss from "./cssTest/TestCss";
 import TestImage from "./imageTest/TestImage";
 import EnvTest from "./envTest/EnvTest";
+import {useEffect} from "react";
+import icoFile from "./imageTest/image/favicon.ico";
 
 function App() {
+  useEffect(() => {
+    // favicon 설정
+    const favicon: any = document.getElementById("favicon");
+    favicon.href = icoFile;
+  }, []);
+
   return (
     <div>
       <TestCss />
