@@ -23,12 +23,13 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: "asset/resource",
+        // https://webpack.kr/guides/asset-modules/
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i, // Asset Modules: 로더를 추가로 구성하지 않아도 에셋파일(폰트, 아이콘)등을 사용할 수 있도록 해주는 모듈
+        type: "asset/resource", // webpack 5 이전 버전에서 file-loader를 사용하여 처리하였음
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: "asset/inline",
+        type: "asset/inline", // webpack 5 이전 버전에서 url-loader를 사용하여 처리하였음
       },
     ],
   },
@@ -36,6 +37,7 @@ module.exports = {
     // 빌드된 파일의 경로 및 파일명 설정
     path: path.resolve(__dirname, "..", "./build"),
     filename: "bundle.js",
+    assetModuleFilename: "images/[hash][ext][query]", // https://webpack.kr/guides/asset-modules/#custom-output-filename
   },
   mode: "development", // 개발 모드 설정 (차후 development / production  분리 예정)
   plugins: [
