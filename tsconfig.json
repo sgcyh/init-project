@@ -19,4 +19,5 @@
     // "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
   },
   "include": ["src/**/*"]
+  //   "include": ["src/**/*", "src/imageTest/custom.d.ts"]  다되네 뭐여...
 }

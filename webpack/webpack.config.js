@@ -22,6 +22,14 @@ module.exports = {
         test: /\.css$/, // css 파일을 사용 할 수 있도록 관련 loader 추가
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: "asset/inline",
+      },
     ],
   },
   output: {
