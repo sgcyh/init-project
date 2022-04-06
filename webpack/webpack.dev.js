@@ -10,7 +10,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       // 환경 변수 임시 확인용
-      "process.env.name": JSON.stringify("Now Development Mode."),
+      "process.env.name": JSON.stringify("(Development)"),
     }),
   ],
 };

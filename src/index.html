@@ -11,7 +11,10 @@
       href="images/06b8624d4c8d4d0cd5b5.ico" // 빌드되서 캐싱된 파일은 어떻게 호출해야되나....
     /> -->
     <link id="favicon" rel="shortcut icon" type="image/x-icon" />
-    <title>Init Propject</title>
+    <title>
+      <%= process.env.name %> Init Propject<%= htmlWebpackPlugin.options.title
+      %>
+    </title>
   </head>
   <body>
     <div id="root"></div>

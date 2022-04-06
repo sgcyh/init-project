@@ -8,7 +8,7 @@ module.exports = {
     new CleanWebpackPlugin(), // 배포 폴더 및 파일 제거
     new webpack.DefinePlugin({
       // 환경 변수 임시 확인용
-      "process.env.name": JSON.stringify("Now Production Mode."),
+      "process.env.name": JSON.stringify("(Production)"),
     }),
   ],
 };

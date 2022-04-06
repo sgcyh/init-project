@@ -46,6 +46,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       //템플릿으로 지정한 html 파일에 빌드된 output 번들 파일을 포함시켜줌
       template: path.resolve(__dirname, "..", "./src/index.html"),
+      title: "아뵤", // 변수 테스트
+      // inject: true,
+      // minify: false,
     }),
   ],
   stats: "errors-only",
