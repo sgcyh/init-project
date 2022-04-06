@@ -7,6 +7,7 @@ import TestImage from "./imageTest/TestImage";
 import EnvTest from "./envTest/EnvTest";
 import {useEffect} from "react";
 import icoFile from "./imageTest/image/favicon.ico";
+import {Counter} from "./reloadingTest/Counter";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
       <TestCss />
       <TestImage />
       <EnvTest />
+      <Counter />
       <h1>...</h1>
     </div>
   );
