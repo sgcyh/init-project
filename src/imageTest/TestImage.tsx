@@ -5,6 +5,7 @@ import icoFile from "./image/favicon.ico";
 const TestImage = () => {
   return (
     <div>
+      <p>이미지 테스트</p>
       <img src={icoFile} alt="favicon" />
       <img src={svgFile} alt="status" />
       <img src={pngFile} alt="logo" />
